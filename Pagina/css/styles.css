@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+body{
+    font-size: 21px; /* px quiere decir 'píxeles': el tamaño de la fuente base es ahora de 10 píxeles de altura */
+    font-family: "Open Sans";
+    color:white;
+    background-color: black;
+    text-decoration: none;
+}
+.imagen{
+    background-image: url(../imagen/logo.jpg);
+    height: 400px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+
+}
+.navegacion{
+    width: 1100px;
+    height: 80px; /*Subir letra*/
+    margin:40px auto;
+    background-color: black;
+    opacity: 0.7   ;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.navegacion ul{
+    list-style: none;
+
+}
+.menu > li{
+    position:relative; /*el submenu sea del mismo tamaño de su padre*/
+    display: inline-block; /*uno al lado de otro*/
+  
+
+}
+.menu > li > a{
+    transition: all 0.3s ease 0s;
+    display: block;
+    padding: 15px 20px;
+    color:white;
+    font-family: 'Roboto',sans-serif;
+    text-decoration: none;
+}
+.menu li a:hover{
+    color: firebrick;
+    padding: 9px 25px;
+    background-color: black;
+    border-radius: 25px;
+    transition: all .3s;
+}
+/*submenu*/
+.submenu{
+    position: absolute; /*Organizar los submenus*/
+    background-color:black;
+    width: 116%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.1s;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color:white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none; /*_*/
+}
+.menu li:hover .submenu{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*Galeria Grid*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /*crea dos columnas con el 50%*/
+    /*Para separar*/
+    grid-template-rows: minmax(100px, auto);
+    gap:1em;
+    text-align: justify;
+    
+}
+.grid img{
+    padding: 1em;
+}
+.grid p{
+    margin: 20px 30px;
+    
+}
+.grid div{
+    /*background: gray;*/
+    padding: 0.5px;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(3,1fr); /*crea dos columnas con el 50%*/
+    
+}
+img:hover{
+    border:2px solid red;   
+}
+
+/*Body flexbox*/
+.principal{
+    width: 1200px;
+    margin: 20px auto;
+    height: auto;
+    /*background-color:red;*/
+    display:flex;
+    flex-wrap: wrap;
+}
+.hijo{
+    /*background-color: blue;*/
+    width: 580px;
+    height: auto;
+    margin:10px;
+    text-align: justify;
+   
+}
+.hijo p{
+    margin: 20px 30px;
+}
+
+
+/*Formulario*/
+.form-register {
+  width: 400px;
+  background: #1b262c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background:#393e46;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid red;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-register a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #393e46;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+}
+
+/*footer*/
+footer{
+    align-self: flex-end;
+    background-color:#000000;
+    opacity: 0.9;
+    width: 100;
+    text-align: center;
+    line-height: 3;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+}
+.social ul li a{
+    display: block;
+    padding: 0 10px;
+    background-color: #000000;
+    color:#ffffff;
+    line-height: 50px;
+    font-size: 18px;
+}
